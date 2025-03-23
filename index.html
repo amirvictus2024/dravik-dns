@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="fa">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تولید آدرس DNS</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>تولید آدرس DNS</h1>
+            <p class="sub-title">ساخت آدرس IPv4 و IPv6 به صورت تصادفی</p>
+        </header>
+
+        <!-- بخش IPv4 -->
+        <section class="ipv4-section">
+            <h2>IPv4</h2>
+            <div class="form-group">
+                <label for="ipv4-location">انتخاب کشور:</label>
+                <select id="ipv4-location">
+                    <option value="Germany">آلمان</option>
+                    <option value="Netherlands">هلند</option>
+                    <option value="France">فرانسه</option>
+                </select>
+            </div>
+            <button id="generate-ipv4" class="generate-btn">تولید آدرس</button>
+            <div class="output-wrapper">
+                <p id="ipv4-output"></p>
+                <button class="copy-btn" data-target="ipv4-output" title="کپی">
+                    <svg width="18" height="18" viewBox="0 0 24 24">
+                        <path fill="#fff"
+                            d="M19,21H8C6.9,21 6,20.1 6,19V7H8V19H19V21M16,3H5C3.9,3 3,3.9 3,5V17H5V5H16V3Z" />
+                    </svg>
+                </button>
+            </div>
+        </section>
+
+        <!-- بخش IPv6 -->
+        <section class="ipv6-section">
+            <h2>IPv6</h2>
+            <div class="radio-group">
+                <input type="radio" id="ipv6-format1" name="ipv6-format" value="format1" checked>
+                <label for="ipv6-format1">****:****::0 و ****:****::1</label>
+            </div>
+            <div class="radio-group">
+                <input type="radio" id="ipv6-format2" name="ipv6-format" value="format2">
+                <label for="ipv6-format2">****:**:**::1 و ****:**:**::1</label>
+            </div>
+            <button id="generate-ipv6" class="generate-btn">تولید آدرس</button>
+            <div class="ipv6-outputs">
+                <div class="output-wrapper ipv6-item">
+                    <p id="ipv6-output1"></p>
+                    <button class="copy-btn" data-target="ipv6-output1" title="کپی">
+                        <svg width="18" height="18" viewBox="0 0 24 24">
+                            <path fill="#fff"
+                                d="M19,21H8C6.9,21 6,20.1 6,19V7H8V19H19V21M16,3H5C3.9,3 3,3.9 3,5V17H5V5H16V3Z" />
+                        </svg>
+                    </button>
+                </div>
+                <div class="output-wrapper ipv6-item">
+                    <p id="ipv6-output2"></p>
+                    <button class="copy-btn" data-target="ipv6-output2" title="کپی">
+                        <svg width="18" height="18" viewBox="0 0 24 24">
+                            <path fill="#fff"
+                                d="M19,21H8C6.9,21 6,20.1 6,19V7H8V19H19V21M16,3H5C3.9,3 3,3.9 3,5V17H5V5H16V3Z" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </section>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
